@@ -5,10 +5,10 @@
         <li style="margin-bottom: 1.5rem;"><a href="products.php" style="color: <?php echo basename($_SERVER['PHP_SELF']) == 'products.php' ? 'var(--primary)' : 'var(--text-main)'; ?>; text-decoration: none; font-weight: <?php echo basename($_SERVER['PHP_SELF']) == 'products.php' ? '700' : '400'; ?>;">Products</a></li>
         <li style="margin-bottom: 1.5rem;"><a href="orders.php" style="color: <?php echo basename($_SERVER['PHP_SELF']) == 'orders.php' ? 'var(--primary)' : 'var(--text-main)'; ?>; text-decoration: none; font-weight: <?php echo basename($_SERVER['PHP_SELF']) == 'orders.php' ? '700' : '400'; ?>;">Orders</a></li>
         <li style="margin-bottom: 1.5rem;"><a href="customer-service.php" style="color: <?php echo basename($_SERVER['PHP_SELF']) == 'customer-service.php' ? 'var(--primary)' : 'var(--text-main)'; ?>; text-decoration: none; font-weight: <?php echo basename($_SERVER['PHP_SELF']) == 'customer-service.php' ? '700' : '400'; ?>;">Support Requests</a></li>
-        <li style="margin-top: 3rem;"><a href="/E-Commerce/index.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">← View Site</a></li>
+        <li style="margin-top: 3rem;"><a href="<?php echo BASE_URL; ?>index.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">← View Site</a></li>
     </ul>
     
-    <a href="/E-Commerce/auth/logout.php" class="btn" style="background: rgba(239, 68, 68, 0.1); color: var(--danger); border: 1px solid var(--danger); width: 100%; padding: 0.8rem; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; transition: all 0.3s;">
+    <a href="<?php echo BASE_URL; ?>auth/logout.php" class="btn" style="background: rgba(239, 68, 68, 0.1); color: var(--danger); border: 1px solid var(--danger); width: 100%; padding: 0.8rem; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; transition: all 0.3s;">
         <i class="fas fa-sign-out-alt" style="margin-right: 0.5rem;"></i> Logout
     </a>
 </aside>

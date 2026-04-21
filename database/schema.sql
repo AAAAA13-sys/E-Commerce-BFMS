@@ -82,10 +82,10 @@ CREATE TABLE IF NOT EXISTS disputes (
 INSERT INTO categories (name) VALUES ('Classics'), ('Supercars'), ('Treasure Hunts'), ('Muscle Cars'), ('Fantasy');
 
 INSERT INTO products (category_id, name, description, price, stock, image_url) VALUES 
-(3, '2026 Hot Wheels RLC x NARUTO Nissan Silvia (S15)', 'Ultra-exclusive Red Line Club collaboration featuring the legendary Naruto Shippuden theme on a Nissan Silvia S15.', 74.99, 50, '/E-Commerce/assets/images/2026 Hot Wheels RLC x NARUTO Nissan Silvia (S15).webp'),
-(2, '2026 Hot Wheels RLC Elite 64 Porsche 911 GT2 EVO 993', 'High-detail Elite 64 series Porsche 911 GT2 EVO with opening parts and premium paint finish.', 64.99, 100, '/E-Commerce/assets/images/2026 Hot Wheels RLC Elite 64 Porsche 911 GT2 EVO 993.webp'),
-(1, '''95 Mazda RX-7', 'A pristine collector piece of the iconic FD3S Mazda RX-7 in a classic street racing setup.', 70.00, 75, '/E-Commerce/assets/images/''95 Mazda rx-7.webp'),
-(4, 'Hot Wheels 2026 Legends Tour 1969 Ford Mustang Boss 302', 'Limited edition Legends Tour exclusive 1969 Ford Mustang Boss 302 with authentic racing deco.', 59.99, 200, '/E-Commerce/assets/images/Hot Wheels 2026 Legends Tour 1969 Ford Mustang Boss 302.webp');
+(3, '2026 Hot Wheels RLC x NARUTO Nissan Silvia (S15)', 'Ultra-exclusive Red Line Club collaboration featuring the legendary Naruto Shippuden theme on a Nissan Silvia S15.', 74.99, 50, 'assets/images/2026 Hot Wheels RLC x NARUTO Nissan Silvia (S15).webp'),
+(2, '2026 Hot Wheels RLC Elite 64 Porsche 911 GT2 EVO 993', 'High-detail Elite 64 series Porsche 911 GT2 EVO with opening parts and premium paint finish.', 64.99, 100, 'assets/images/2026 Hot Wheels RLC Elite 64 Porsche 911 GT2 EVO 993.webp'),
+(1, '''95 Mazda RX-7', 'A pristine collector piece of the iconic FD3S Mazda RX-7 in a classic street racing setup.', 70.00, 75, 'assets/images/''95 Mazda rx-7.webp'),
+(4, 'Hot Wheels 2026 Legends Tour 1969 Ford Mustang Boss 302', 'Limited edition Legends Tour exclusive 1969 Ford Mustang Boss 302 with authentic racing deco.', 59.99, 200, 'assets/images/Hot Wheels 2026 Legends Tour 1969 Ford Mustang Boss 302.webp');
 
 -- Default Admin (Password: admin123)
 INSERT INTO users (name, email, password, role) VALUES 

@@ -60,7 +60,13 @@ $cart_items = $stmt->fetchAll();
                     $subtotal += $total;
                 ?>
                 <div style="display: flex; gap: 2rem; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--glass-border); align-items: center;">
-                    <img src="<?php echo $item['image_url']; ?>" alt="<?php echo $item['name']; ?>" style="width: 100px; height: 100px; border-radius: 12px; object-fit: cover;">
+                    <?php 
+                        $img_path = $item['image_url'];
+                        if (strpos($img_path, 'http') !== 0 && strpos($img_path, '/') !== 0) {
+                            $img_path = BASE_URL . $img_path;
+                        }
+                    ?>
+                    <img src="<?php echo htmlspecialchars($img_path, ENT_QUOTES); ?>" alt="<?php echo $item['name']; ?>" style="width: 100px; height: 100px; border-radius: 12px; object-fit: cover;">
                     <div style="flex-grow: 1;">
                         <h3><?php echo $item['name']; ?></h3>
                         <p style="color: var(--accent); font-weight: 600;">$<?php echo number_format($item['price'], 2); ?></p>

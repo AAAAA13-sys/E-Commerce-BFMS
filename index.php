@@ -24,7 +24,7 @@
             <?php 
                 $img_path = $product['image_url'];
                 if (strpos($img_path, 'http') !== 0 && strpos($img_path, '/') !== 0) {
-                    $img_path = '/E-Commerce/' . $img_path;
+                    $img_path = BASE_URL . $img_path;
                 }
             ?>
             <img src="<?php echo htmlspecialchars($img_path, ENT_QUOTES); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>" class="product-image">

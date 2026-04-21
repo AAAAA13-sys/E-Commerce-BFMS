@@ -2,7 +2,7 @@
 include '../includes/header.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: " . BASE_URL . "auth/login.php");
     exit;
 }
 
@@ -14,7 +14,7 @@ $stmt->execute([$user_id]);
 $cart_items = $stmt->fetchAll();
 
 if (!$cart_items) {
-    header("Location: products.php");
+    header("Location: " . BASE_URL . "products/products.php");
     exit;
 }
 
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->prepare("DELETE FROM cart WHERE user_id = ?")->execute([$user_id]);
         
         $pdo->commit();
-        header("Location: order-confirmation.php?id=" . $order_id);
+        header("Location: " . BASE_URL . "orders/order-confirmation.php?id=" . $order_id);
         exit;
     } catch (Exception $e) {
         $pdo->rollBack();

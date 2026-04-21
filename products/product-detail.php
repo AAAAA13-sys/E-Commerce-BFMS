@@ -18,7 +18,13 @@ if (!$product) {
 
 <div class="detail-container">
     <div class="glass detail-image-box">
-        <img src="<?php echo $product['image_url']; ?>" alt="<?php echo $product['name']; ?>">
+        <?php 
+            $img_path = $product['image_url'];
+            if (strpos($img_path, 'http') !== 0 && strpos($img_path, '/') !== 0) {
+                $img_path = BASE_URL . $img_path;
+            }
+        ?>
+        <img src="<?php echo htmlspecialchars($img_path, ENT_QUOTES); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
     </div>
     <div class="fade-in">
         <span class="detail-category"><?php echo $product['category_name']; ?></span>

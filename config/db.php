@@ -14,6 +14,17 @@ $options = [
 
 try {
      $pdo = new PDO($dsn, $user, $pass, $options);
+     
+     // Define BASE_URL for consistent pathing
+     $base_dir = str_replace('\\', '/', dirname(__DIR__));
+     $doc_root = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
+     $relative_path = str_replace($doc_root, '', $base_dir);
+     $relative_path = '/' . trim($relative_path, '/') . '/';
+     $relative_path = str_replace('//', '/', $relative_path); // Ensure only one slash if it was empty
+     
+     if (!defined('BASE_URL')) {
+         define('BASE_URL', $relative_path);
+     }
 } catch (\PDOException $e) {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }

@@ -58,9 +58,9 @@ $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
                     <td style="padding: 1rem;">
                         <?php 
                             $img_path = $p['image_url'];
-                            // If it's a relative path starting with assets/, prepend /E-Commerce/
+                            // If it's a relative path starting with assets/, prepend BASE_URL
                             if (strpos($img_path, 'http') !== 0 && strpos($img_path, '/') !== 0) {
-                                $img_path = '/E-Commerce/' . $img_path;
+                                $img_path = BASE_URL . $img_path;
                             }
                         ?>
                         <img src="<?php echo htmlspecialchars($img_path, ENT_QUOTES); ?>" style="width: 50px; height: 50px; object-fit: contain; background: white; border-radius: 4px; padding: 2px;">

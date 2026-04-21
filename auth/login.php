@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['role'] = $user['role'];
         
         if ($user['role'] === 'admin') {
-            header("Location: ../admin/dashboard.php");
+            header("Location: " . BASE_URL . "admin/dashboard.php");
         } else {
-            header("Location: ../index.php");
+            header("Location: " . BASE_URL . "index.php");
         }
         exit;
     } else {
